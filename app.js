@@ -1,9 +1,8 @@
-function digaOlá() {
-    console.log("Olá, mundo!");
+function dobra() {
+    return entrada * 2;
 }
-function oláPessoa(nome) {
-    nome = prompt("Qual é o seu nome?");
-    console.log(`Olá, ${nome}!`);
+function verificarChute(){
+    entrada = parseInt(document.querySelector('input').value);
+    console.log(entrada);
+    console.log(dobra());
 }
-digaOlá();
-oláPessoa();
