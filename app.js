@@ -1,15 +1,9 @@
-function textoNaTela(tag, texto) {
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
+function digaOlá() {
+    console.log("Olá, mundo!");
 }
-
-textoNaTela('h1', 'Bem vindo ao jogo do número secreto ');
-textoNaTela('p', 'Digite um número entre 1 e 10');
-
-function verificarChute() {
-    console.log(getRandom());
-}    
-
-function getRandom() {
-    return parseInt(Math.random() * 10 + 1);
+function oláPessoa(nome) {
+    nome = prompt("Qual é o seu nome?");
+    console.log(`Olá, ${nome}!`);
 }
+digaOlá();
+oláPessoa();
