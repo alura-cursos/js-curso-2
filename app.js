@@ -1,25 +1,35 @@
+let contador = 0;
+let maiorNumero = 0;
+let valor2 = 0;
+let valor1 = 0;
 function mostrarTexto(tag, texto) {
-    campo = document.querySelector(tag);
+    let campo = document.querySelector(tag)
     campo.innerHTML = texto;
 }
-mostrarTexto('h1', 'Calculadora de média!');
-mostrarTexto('p', 'Coloque aqui 3 números para calcular a média:');
-
-let soma = 0;
-let contador = 0;
-
-function calcularMedia(soma, contador) {
-    return (soma / contador);
+function zerar() {
+    document.querySelector('input').value = '';
 }
 function verificarChute() {
-    let valor = parseInt(document.querySelector('input').value);
-    soma = soma + valor;
-    document.querySelector('input').value = '';
+    if (contador == 0) {
+        valor1 = parseInt(document.querySelector('input').value);
+        zerar();
+    } else {
+        valor2 = parseInt(document.querySelector('input').value);
+        zerar();
+    }
+    if (valor1 > valor2) {
+        maiorNumero = valor1;
+    } else {
+        maiorNumero = valor2;
+    }
     contador++;
-
-    if (contador == 3) {
-        alert(calcularMedia(soma, contador));
+    if (contador == 2) {
+        alert(maiorNumero);
         contador = 0;
-        soma = 0;
     }
 }
+mostrarTexto('h1', 'Irei mostrar qual o maior número!')
+mostrarTexto('p', 'Digite aqui dois números')
+
+
+
