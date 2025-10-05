@@ -1,38 +1,33 @@
-let contador = 0;
-let altura = 0;
-let peso = 0;
-function mostrarTexto(tag, texto) {
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-}
-function caucularIMC(peso,altura) {
-    return peso / (altura * altura);
-}
-function zerar() {
-    document.querySelector('input').value = '';
-}
-function verificarChute() {
-    if (contador == 0) {
-        altura = parseFloat(document.querySelector('input').value);
+// Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
+let contador = 1;
+fatorado = 1;
+function fatorial(numero) {
+    while (contador <= numero) {
+        fatorado = contador * fatorado;
         contador++;
-        zerar();
-        mostrarTexto('p', 'Agora digite aqui seu peso:');
-    } else {
-        peso = parseFloat(document.querySelector('input').value);
-        zerar();
-        mostrarTexto('p', `Seu IMC atual é de ${caucularIMC(peso,altura)} `)
-        document.getElementById('reiniciar').removeAttribute('disabled');
+    }
+    return fatorado;
+}
+//Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.
+function converte(valor) {
+    return valor * 4,80;
+}
+//Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+function area(altura,largura) {
+    let area = altura * largura;
+    let perimetro = 2 * (altura + largura);
+    console.log(`Área = ${area} e Perímetro = ${perimetro}`);
+}
+//Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu r que será fornecido como parâmetro. Considere Pi = 3,14.
+function areaCirculo(r){
+    let pi = 3.14;
+    let area = pi * (r * r);
+    let perimetro = 2 * pi * r;
+    console.log(`Área do circulo = ${area} e Perímetro = ${perimetro}`)
+}
+//Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+function tabuada(numero){
+    for (let i = 1; i < 10; i++) {
+        console.log(`${numero} x ${i} = ${numero * i}`)
     }
 }
-function reiniciar() {
-    bemVindo();
-    contador = 0;
-    peso = 0;
-    altura = 0;
-    document.getElementById('reiniciar').setAttribute('disabled','true');
-}
-function bemVindo() {
-    mostrarTexto('h1', 'Bem vindo a Calculadora de IMC!');
-    mostrarTexto('p', 'Digite aqui sua altura:');
-}
-bemVindo();
