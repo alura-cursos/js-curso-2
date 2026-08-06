@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html
 <html lang="pt-br">
 
 <head>
@@ -32,10 +32,176 @@
         </div>
     </div>
 
-
-
-
     <script src="app.js" defer></script>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculadora de Operações</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="container__cabecalho">
+            <h1>
+                Calculadora de
+                <span class="container__texto-azul">operações</span>
+            </h1>
+
+            <p>Digite um valor e clique em Calcular.</p>
+        </header>
+
+        <div class="container__secoes">
+
+            <!-- Seção 1 -->
+            <section class="operacao">
+                <h2 class="operacao__titulo">Título da operação 1</h2>
+
+                <label for="valor-1" class="operacao__label">
+                    Digite um ou mais dígitos:
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-1"
+                    class="operacao__input"
+                    placeholder="Digite um número"
+                >
+
+                <button
+                    type="button"
+                    class="operacao__botao"
+                    onclick="calcularOperacao1()"
+                >
+                    Calcular
+                </button>
+
+                <div class="operacao__resultado">
+                    <span class="resultado__titulo">Resultado:</span>
+                    <span id="resultado-1" class="resultado__valor">
+                        Aguardando cálculo
+                    </span>
+                </div>
+            </section>
+
+            <!-- Seção 2 -->
+            <section class="operacao">
+                <h2 class="operacao__titulo">Título da operação 2</h2>
+
+                <label for="valor-2" class="operacao__label">
+                    Digite um ou mais dígitos:
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-2"
+                    class="operacao__input"
+                    placeholder="Digite um número"
+                >
+
+                <button
+                    type="button"
+                    class="operacao__botao"
+                    onclick="calcularOperacao2()"
+                >
+                    Calcular
+                </button>
+
+                <div class="operacao__resultado">
+                    <span class="resultado__titulo">Resultado:</span>
+                    <span id="resultado-2" class="resultado__valor">
+                        Aguardando cálculo
+                    </span>
+                </div>
+            </section>
+
+            <!-- Seção 3 -->
+            <section class="operacao">
+                <h2 class="operacao__titulo">Título da operação 3</h2>
+
+                <label for="valor-3" class="operacao__label">
+                    Digite um ou mais dígitos:
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-3"
+                    class="operacao__input"
+                    placeholder="Digite um número"
+                >
+
+                <button
+                    type="button"
+                    class="operacao__botao"
+                    onclick="calcularOperacao3()"
+                >
+                    Calcular
+                </button>
+
+                <div class="operacao__resultado">
+                    <span class="resultado__titulo">Resultado:</span>
+                    <span id="resultado-3" class="resultado__valor">
+                        Aguardando cálculo
+                    </span>
+                </div>
+            </section>
+
+            <!-- Seção 4 -->
+            <section class="operacao">
+                <h2 class="operacao__titulo">Título da operação 4</h2>
+
+                <label for="valor-4" class="operacao__label">
+                    Digite um ou mais dígitos:
+                </label>
+
+                <input
+                    type="number"
+                    id="valor-4"
+                    class="operacao__input"
+                    placeholder="Digite um número"
+                >
+
+                <button
+                    type="button"
+                    class="operacao__botao"
+                    onclick="calcularOperacao4()"
+                >
+                    Calcular
+                </button>
+
+                <div class="operacao__resultado">
+                    <span class="resultado__titulo">Resultado:</span>
+                    <span id="resultado-4" class="resultado__valor">
+                        Aguardando cálculo
+                    </span>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
